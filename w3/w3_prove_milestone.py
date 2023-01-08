@@ -6,6 +6,7 @@ adult_meal = float(input("What is the price of an adult's meal? "))
 children_number = int(input("How many children are there? "))
 adult_number = int(input("How many children are there? "))
 tax = float(input("What is the sales tax rate? "))
+customer_payment = float(input('Cash delivered by customer: '))
 
 subtotal = ((child_meal*children_number)+(adult_meal*adult_number))
 
@@ -13,7 +14,7 @@ sales_tax_rate = (subtotal*(tax/100))
 
 total = (subtotal + sales_tax_rate)
 
-
+grocery_return = (customer_payment - total) 
 
 print('----------------Invoice----------------')
 print (f"Date and time " + time.strftime("%c"))
@@ -29,4 +30,6 @@ print(f'Subtotal: ${round(subtotal, 2)}')
 print(f'Sales Tax: ${round(sales_tax_rate, 2)}')
 print(f'TOTAL: ${round(total, 2)}')
 
+print(f'Cash by customer ${customer_payment}')
+print(f'Change ${grocery_return}')
 print('--------Thanks for your purchase-------')
