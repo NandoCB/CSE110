@@ -22,8 +22,8 @@ print('------------------------------------------------------------')
 
 print('Create your password to access the system')
 print("""#Remember the password to establish must contain the following characteristics:\n
-#1. The password must have between 6 and 12 characters\n
-#2. The password must contain some special character\n
+#1. The password must have between 6 and 12 characters.\n
+#2. The password must contain some special character.\n
 #3. Password must contain some capital letter.\n
 #4. The password must contain some lower case.\n
 #5. The password must contain some digit.\n""")
