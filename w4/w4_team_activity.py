@@ -1,7 +1,7 @@
 import math
 
 print('''Speed of a Falling Object\nWelcome to the velocity calculator. Please enter the following:''')
-print('\n')
+print()
 
 print('Enter the data to calculate the c value')
 
