@@ -30,7 +30,7 @@ for i in range(2):
                 total = (subtotal + sales_tax_rate)
                 print(f'TOTAL: ${round(total, 2)}')
                 customer_payment = float(input('Cash delivered by customer: '))
-                print('\n')
+                print('')
 
                 grocery_return = (customer_payment - total) 
 
@@ -50,9 +50,9 @@ for i in range(2):
 
                 print(f'Cash by customer ${customer_payment}')
                 print(f'Change ${grocery_return}')
-                print('\n')
+                print('')
                 print(f'''You were treated by {employee_name}\nOfficial number: {employee_number}''')
-                print('\n')
+                print('')
                 print('--------Thanks for your purchase-------')
                 exit()
             

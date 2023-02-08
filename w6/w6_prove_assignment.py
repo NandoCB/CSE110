@@ -43,7 +43,6 @@ on your way without any further problems while you decide whether to go to TOWN 
             else:
                 print(bad_choose)
         if action1 == 'run':
-            print()
             print('''You start to run but unfortunately the bear hears you and begins to run after you, soon you begin to
 feel that the bear is getting closer and you are aware of the inevitable, the bear catches up with you
 and despite your efforts to free yourself from it you die.''')
@@ -58,27 +57,22 @@ you also heard something off to the side.''')
         action3 = input('Do you want to FOLLOW the path, take your PHONE and ask for help or LOOK in the trees for what made the noise? ')
         action3 = action3.lower()
         if action3 == 'follow':
-            print()
             print('''Without making much noise, you take the path that is in front of you and you turn on the flashlight
 in some sections of the route to make sure that there are no dangers.''')
         
         elif action3 == 'phone':
-            print()
             print('''You take your phone and call 911, they immediately contact the forest ranger service
 and after a while they come for you.''')
 
         elif action3 == 'look':
-            print()
             print('''You pick up the flashlight and turn it on, and for an instant, the forest around you lights up.
 You see a large grizzly bear starting to see you.''')
             action4 = input('What do you do? Do you FACE the bear or THINK what to do? ')
             action4 = action4.lower()
             if action4 == 'face':
-                print()
                 print('''You start to raise your hands and scream desperately while you move the flashlight.
 Surprisingly the bear gets scared and runs away.''')
             elif action4 == 'think':
-                print()
                 print('''You quickly remember a TV show where they talked about bear attacks.
 You remember that you should not make sudden movements, or do anything that the animal feels threatened.
 Very slowly you immediately begin to back away from danger.''')
@@ -96,11 +90,9 @@ elif history == 'B' or history == 'b':
     print("Let's go!")
 
     print('Once upon a time there was a very angry donkey, who did not know who to ask for wise advice.')
-    action5 = input('Do you want to ask the KING of the Jungle or the old ELEPHANT for advice? ')
-    print()
+    action5 = input('Do you want to ask the KING of the Jungle or the old ELEFHANT for advice? ')
     action5 = action5.lower()
     if action5 == 'king':
-       
         print('''The donkey in the presence of the king told him: no one respects me or fears me (the donkey cried).
 Teach me to Roar like you. He would thus make men and beasts flee.''')
         print('''Listening to him carefully and having much more important matters in the kingdom, I didn't know
@@ -108,14 +100,12 @@ whether to spend more TIME on him or just KICK him out.''')
         action6 = input('Do you think the king should listen to him and spend more TIME on him or KICK him out? ')
         if action6 == 'time':
             action6 = action6.lower()
-            print()
-            print('''The king of the jungle with patience and love finished listening, looked compassionately at the
+        print('''The king of the jungle with patience and love finished listening, looked compassionately at the
 deluded donkey and gave him the following advice:
 "Though he will roar most terribly, my friend, you could not impress even the most timid rabbit." The one who mocks
 you today would only tremble if you had claws and fangs as huge as mine. The voice, when it is not accompanied by
 drive and strength, is useless to impose itself.''')
-        elif action6 == 'kick':
-            print()
+        if action6 == 'Kick':
             print('''The king, surprised by the problem that the donkey was telling him, began to get angry since he
 considered it nonsense. He immediately asked the guards to throw the donkey away. Although when the donkey was going
 to his house he met the old and wise elephant who promised to give him great advice.''')
