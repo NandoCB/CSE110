@@ -16,6 +16,12 @@ if history == 'A' or history == 'a':
     print()
     print("Let's go!")
 
+#################################################################
+#
+# First story
+#
+#################################################################
+
     print('You are walking through a dark forest and find two items: a MATCH and a FLASHLIGHT.')
     tool = input('Which one do you want to pick up? ')
     tool = tool.lower()
@@ -88,7 +94,11 @@ Very slowly you immediately begin to back away from danger.''')
                 print(bad_choose)
     else:
         print(bad_choose)
-
+#################################################################
+#
+# Second story
+#
+#################################################################
 elif history == 'B' or history == 'b':
     print('The chosen story is: ')
     print(lista[1])
