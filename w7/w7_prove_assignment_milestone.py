@@ -51,7 +51,7 @@ while back == True:
             print("Your word is a Contry")
 
     print('Pay attention your word has', len(secret_word), 'letters')
-    #print(secret_word)
+    print(secret_word)
 
     while repeat == True:
         print('Your hint is:')
@@ -61,24 +61,24 @@ while back == True:
         guess_word = input('What is your guess? ')
         guess_word = guess_word.lower()
 
+        char_word = ""
+        for position in range(len(secret_word)):
 
-        for char in secret_word:
-            if len(guess_word) != len(secret_word):
-                print('_', end=' ')
-            elif char in guess_word:
-                print(char.upper(), end=' ')
+            if secret_word[position] == guess_word[position]:
+                char_word = char_word + secret_word[position].upper()
+            elif secret_word[position] in guess_word:
+                char_word = char_word + guess_word[position].lower()
             else:
-                print('_', end=' ')
-        print()
-
-        
+                char_word = char_word + '_'       
+        print(char_word)
 
         if len(guess_word) != len(secret_word):
             print('Sorry, the guess must have the same number of letters as the secret word.')
             guesses += 1
             
         elif guess_word != secret_word:
-                print("That's not the word Keep looking!")
+                print("""That's not the word!\nKeep looking!""")
+                print()
                 guesses += 1
                 repeat = True
         else:
