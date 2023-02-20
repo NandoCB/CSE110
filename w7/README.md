@@ -39,3 +39,17 @@ char_word = ""
 
  #print(f'La letra en el lugar {x} es igual?')
             #print(secret_word[x] == guess_word[x])
+
+
+
+char_word = ""
+        char_word2 = ""
+        for position in range(len(secret_word)):
+
+            if secret_word[position] == guess_word[position]:
+                char_word = char_word + secret_word[position].upper()
+            elif secret_word[position] in guess_word:
+                char_word2 = char_word2 + guess_word[position].lower()
+            else:
+                char_word = char_word + '_'       
+        print(char_word + char_word2)
