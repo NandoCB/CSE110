@@ -62,20 +62,21 @@ while back == True:
         guess_word = guess_word.lower()
 
         char_word = ""
+        char_word2 = ""
         for position in range(len(secret_word)):
 
             if secret_word[position] == guess_word[position]:
                 char_word = char_word + secret_word[position].upper()
             elif secret_word[position] in guess_word:
-                char_word = char_word + guess_word[position].lower()
+                char_word2 = char_word2 + guess_word[position].lower()
             else:
                 char_word = char_word + '_'       
-        print(char_word)
+        print(char_word + char_word2)
 
         if len(guess_word) != len(secret_word):
             print('Sorry, the guess must have the same number of letters as the secret word.')
             guesses += 1
-            
+          
         elif guess_word != secret_word:
                 print("""That's not the word!\nKeep looking!""")
                 print()
