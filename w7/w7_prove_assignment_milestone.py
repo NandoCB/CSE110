@@ -2,6 +2,7 @@ import random
 guesses = 0
 repeat = True
 back = True
+index=0
 
 name = input("What is your name? ")
 print('Welcome to the word guessing game!')
@@ -39,21 +40,21 @@ while back == True:
     words = fruits + animals + accessories + stationary + countries
     secret_word = random.choice(words)
 
-    if secret_word in fruits:
-            print("Your word is a Fruit")
-    elif secret_word in accessories:
-            print("Your word is related to Accessory")
-    elif secret_word in stationary:
-            print("Your word is related to Stationary")
-    elif secret_word in animals:
-            print("Your word is an Animal")
-    elif secret_word in countries:
-            print("Your word is a Contry")
-
-    print('Pay attention your word has', len(secret_word), 'letters')
-    print(secret_word)
-
     while repeat == True:
+        if secret_word in fruits:
+                print("Pay attention:\nYour word is a Fruit")
+        elif secret_word in accessories:
+                print("Pay attention:\nYour word is related to Accessory")
+        elif secret_word in stationary:
+                print("Pay attention:\nYour word is related to Stationary")
+        elif secret_word in animals:
+                print("Pay attention:\nYour word is an Animal")
+        elif secret_word in countries:
+                print("Pay attention:\nYour word is a Contry")
+
+        print(f'and has {len(secret_word)} letters')
+        print(secret_word)
+    
         print('Your hint is:')
         for char in secret_word:
             print('_', end =' ')
@@ -61,7 +62,7 @@ while back == True:
         guess_word = input('What is your guess? ')
         guess_word = guess_word.lower()
 
-        index=0
+        
         for char in guess_word:
             if len(guess_word) != len(secret_word):
                 print('_', end=' ')
@@ -74,7 +75,7 @@ while back == True:
                 print('_', end=' ')
             index+=1
         print()
-        
+        index=0
 
         if len(guess_word) != len(secret_word):
             print('Sorry, the guess must have the same number of letters as the secret word.')
