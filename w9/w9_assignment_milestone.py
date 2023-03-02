@@ -7,6 +7,7 @@ manage_cart = True
 addin_item_dashboard = True
 total = 0
 position = 0
+total_amount = 0
 
 print('Welcome to the Shopping Cart Program!')
 print('')
@@ -15,9 +16,10 @@ while manage_cart == True:
     print("""Please select one of the following:
     1. Add item
     2. View cart
-    3. Remove item
-    4. Compute total
-    5. Quit""")
+    3. Compute total
+    4. Remove item
+    5. Clear Cart
+    6. Quit""")
 
     enter_action = int(input('Please enter an action: '))
     if enter_action == 1:
@@ -53,14 +55,18 @@ while manage_cart == True:
             counter += 1
  
         print("+------------+--------------------+------------+-------------------------+")
+        
+        total = 0
+        total_amount = 0
+
         for amount in amount_list:
             total += amount
-        
-    
+            total_amount += 1
+   
         print("|------------|--------------------|------------|TOTAL:       |${:>10.2f}|".format(total))
         print("+------------+--------------------+------------+-------------------------+")
     
-    elif enter_action == 3:
+    elif enter_action == 4:
         delete_item = input('Enter the number of the item to delete: ')
         print()
         if delete_item.isdigit() and int(delete_item) <= counter:
@@ -75,13 +81,31 @@ while manage_cart == True:
              print('The article does not exist')
              print()
     
-    elif enter_action == 4:
+    elif enter_action == 3:
+
+        total = 0
+        total_amount = 0
+
         for amount in amount_list:
             total += amount
+            total_amount += 1
+       
         print(f'The total price of the items in the shopping cart is ${total:.2f}')
         print()
-            
+
     elif enter_action == 5:
+        delete_all = input('Are you sure you want to remove all items from the cart? [YES or NO]: ')
+        delete_all = delete_all.lower()
+
+        if delete_all == 'yes':
+            item_list = []
+            item_quantity = []
+            item_price = []
+            amount_list = []
+            
+            manage_cart == True
+
+    elif enter_action == 6:
         user_exit = input('Are you sure you want to exit the cart? [YES or NO]: ')
         user_exit = user_exit.lower()
         if user_exit == 'yes':
